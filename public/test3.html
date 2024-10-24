@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+    <link rel="stylesheet" href="test3.css">
+</head>
+<body>
+    <header>
+        <h1>damni information</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="auth-buttons">
+            <a href="login.html" class="button">Login</a>
+            <a href="signup.html" class="button">Sign Up</a>
+        </div>
+
+    </header>
+    <div class="container">
+        <aside>
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="spring.html">spring</a></li>
+                <li><a href="summer.html">summer</a></li>
+                <li><a href="falll.html">fall</a></li>
+                <li><a href="winter.html">winter</a></li>
+                <li><a href="">나의 옷 소개하기</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div class="product-grid">
+                <div class="box-item">
+                    <div class="slide">
+                        <img src="001.png" alt="이미지 1">
+                    </div>
+                    <div class="slide">
+                        <img src="002.png" alt="이미지 2">
+                    </div>
+                    <div class="slide">
+                        <img src="003.png" alt="이미지 3">
+                    </div>
+                    <div class="slide">
+                        <img src="004.png" alt="이미지 4">
+                    </div>
+                    <div class="slide">
+                        <img src="005.png" alt="이미지 5">
+                    </div>
+                </div>
+                
+                <script>
+                    let currentSlide = 0;
+                    const slides = document.querySelectorAll('.slide');
+                    const slideCount = slides.length;
+             
+                    function showSlide(n) {
+                        slides.forEach(slide => slide.style.display = 'none');
+                        slides[n].style.display = 'block';
+                    }
+             
+                    function nextSlide() {
+                        currentSlide = (currentSlide + 1) % slideCount;
+                        showSlide(currentSlide);
+                    }
+             
+                    function prevSlide() {
+                        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                        showSlide(currentSlide);
+                    }
+             
+                    document.addEventListener('DOMContentLoaded', () => {
+                        showSlide(currentSlide);
+                        setInterval(nextSlide, 3000); // 3초마다 자동 슬라이드
+                    });
+                </script>
+            </div>
+        </main>
+    </div>
+    <mid>
+
+        <div id="product-list">
+            <div class="product-card">
+                <div>
+                    <img class="product-img" src="imgfile/spring/spring1.jpg"/>
+                    <a>벚꽃 아래에서 셔츠입고 분위기 있게 한장</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div>
+                    <img class="product-img" src="imgfile/summer/summer1.jpg"/>
+                    <a>바다 앞에서 크롭티에 청색바지 입고</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div>
+                    <img class="product-img" src="imgfile/fall/fall1.jpg"/>
+                    <a>가을에는 얇은 맨투맨이 최고지</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div>
+                    <img class="product-img" src="imgfile/winter/winter1.jpg"/>
+                    <a>오버핏 후드티에 와이드 남색팬츠</a>
+                </div>
+            </div>      
+        </div>
+    </mid>
+    <div id="bottom-dummy"></div>
+</body>
+
+<bottom>
+        <p>&copy; 2024 Online Shop. All rights reserved.</p>
+</bottom>
+
+
+</html>

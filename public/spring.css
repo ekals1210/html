@@ -1,0 +1,121 @@
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+  .box-item {
+    flex-basis : 750px;
+    width : 750px;
+    flex-grow : 1;
+  
+  }
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    gap: 50px;
+}
+
+aside {
+    width: 20%;
+    padding: 1rem;
+    background: #f4f4f4;
+}
+
+main {
+    width: 80%;
+    padding: 1rem;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* 각 이미지 사이의 간격 조정 */
+    justify-content: center; /* 가운데 정렬 */
+}
+
+.product-card {
+    flex: 1 1 calc(25% - 32px); /* 각 카드의 너비를 조정하고, 여백을 고려 */
+    box-sizing: border-box;
+    max-width: calc(25% - 32px); /* 각 카드의 최대 너비 설정 */
+    border: 1px solid #ddd; /* 카드의 테두리 추가 */
+    padding: 8px; /* 카드의 내부 여백 */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    background: #fff; /* 배경색 설정 */
+}
+
+.product-img {
+    width: 100%; /* 이미지가 카드의 너비를 채우도록 설정 */
+    height: 100%; /* 이미지의 비율을 유지하며 크기 조정 */
+    display: block;
+    object-fit : cover;
+}
+
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-buttons .button {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.auth-buttons .button:hover {
+    background: #0056b3;
+}
+
+bottom{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
